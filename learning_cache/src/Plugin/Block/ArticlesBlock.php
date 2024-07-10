@@ -36,13 +36,14 @@ class ArticlesBlock extends BlockBase {
       $items[] = $article->toLink()->toRenderable();
     }
 
-    // $build = [
-    //   '#theme' => 'item_list',
-    //   '#items' => $items,
-    //   '#cache' => [
-    //     'tags' => ['node_list:article'],
-    //   ],
-    // ];
+    $build = [
+      '#theme' => 'item_list',
+      '#items' => $items,
+      '#cache' => [
+        'tags' => ['node_list:article'],
+        'contexts' => ['user'],
+      ],
+    ];
 
     return $build;
   }

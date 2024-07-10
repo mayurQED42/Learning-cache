@@ -1,0 +1,6 @@
+name: Learning Cache
+description: Custom modules cache learning work.
+package: Custom
+type: module
+core_version_requirement: ^9 || ^10
+version: '1.0'
